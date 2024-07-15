@@ -14,6 +14,7 @@ const productsSlice = createSlice({
       state.products = action.payload;
     },
     setActiveProduct(state, action) {
+      console.log(action.payload,"from product slice");
       state.activeProduct = action.payload;
     },
   },

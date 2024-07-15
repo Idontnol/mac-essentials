@@ -29,7 +29,7 @@ const Navbar=()=>{
                 <div className="flex flex-row items-center space-x-7">
                     <CiUser className='cursor-pointer' style={{height:"26px",width:"18px"}} />
                     <Image src="/notification.svg" alt="notification" height={24} width={23} className='mb-6 cursor-pointer'/>
-                    <HiOutlineShoppingBag className='cursor-pointer' style={{height:"24px",width:"19px"}} />
+                    <HiOutlineShoppingBag className='cursor-pointer' onClick={()=>{router.push('/checkout')}} style={{height:"24px",width:"19px"}} />
                 </div>
             </div>
         </div>
