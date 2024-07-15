@@ -6,6 +6,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import {useDispatch,useSelector} from "react-redux";
+import { testData } from "../utils/constants";
 
 const ProductInformation=()=>{
     const [favourite,setFavourite]=useState(false);
@@ -13,9 +14,9 @@ const ProductInformation=()=>{
     const [policy1,setPolicy1]=useState(false);
     const [policy2,setPolicy2]=useState(false);
     const [openCheckout,setOpenCheckout]=useState(false);
-    const activeProduct=useSelector((state)=>state.products.activeProduct);
+    const activeProduct=useSelector((state)=>state.products?.activeProduct) || testData[1];
     const dispatch = useDispatch();
-
+    console.log(activeProduct,"her tit ia");
     const addToCart=()=>{
 
         setOpenCheckout(true);

@@ -4,8 +4,9 @@ import Image from "next/image";
 import { newItems, sectionData, testData } from "../utils/constants";
 import { RiArrowDropUpLine,RiArrowDropDownLine } from "react-icons/ri";
 import {useSelector,useDispatch} from "react-redux";
-
+import {useRouter} from "next/navigation";
 import { useState } from "react";
+import { setActiveProduct,setProducts} from "../utils/productsSlice";
 
 const AllProducts=()=>{
     const [sectionVisibilities, setSectionVisibilities] = useState(Array(sectionData.length).fill(false));
@@ -22,6 +23,8 @@ const AllProducts=()=>{
     const [productsData,setProductsData]=useState([]);
     const [sorte,setSorte]=useState("");
     const dispatch=useDispatch();
+    const router=useRouter();
+    // const products = useSelector((state) => state.products.products);
     
 
     const fetchData=async()=>{
