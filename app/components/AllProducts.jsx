@@ -59,7 +59,7 @@ const AllProducts=()=>{
     }
     // fetchData();
     if(productsData.length === 0){
-        fetchData();
+        // fetchData();
         console.log("fetched products data");
     }
     const handleSort = (val) => {
