@@ -83,6 +83,7 @@ const AllProducts=()=>{
     };
 
     const handleProductView=(item)=>{
+        console.log(item,"product is");
         dispatch(setActiveProduct(item));
         router.push('/product-details');
     }
