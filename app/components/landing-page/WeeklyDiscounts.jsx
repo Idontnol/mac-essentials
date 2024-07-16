@@ -17,7 +17,7 @@ const WeeklyDiscounts=()=>{
 
                 <div className="flex flex-row items-center h-[82%] px-9 w-full relative justify-evenly">
 
-                <div className="flex flex-row items-center h-[82%] w-[92%] overflow-y-hidden space-x-12 px-9 overflow-x-auto new-products relative">
+                <div className="flex flex-row items-center h-[82%] w-[92%] overflow-y-hidden space-x-12 px-9 overflow-x-auto new-products2 relative">
                 {
                 newItems.map((item,idx)=>
                     <div className="flex flex-col items-center"  key={idx}>
@@ -34,7 +34,7 @@ const WeeklyDiscounts=()=>{
                 )
                 }
                 </div>
-                <Image src="/right.svg" alt="" className=" cursor-pointer" height={70} width={70}  onClick={() => { document.querySelector('.new-products').scrollBy({ left: 400, behavior: 'smooth' }); }} />
+                <Image src="/right.svg" alt="" className=" cursor-pointer" height={70} width={70}  onClick={() => { document.querySelector('.new-products2').scrollBy({ left: 400, behavior: 'smooth' }); }} />
             </div>
 
             </div>

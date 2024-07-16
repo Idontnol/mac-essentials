@@ -3,10 +3,12 @@ import Image from "next/image";
 import { paymentOptions } from "../utils/constants";
 import { FaChevronLeft } from "react-icons/fa6";
 import {useRouter} from 'next/navigation';
+import {useDispatch,useSelector} from "react-redux";
 
 const PaymentInitiaion=(props)=>{
     const router=useRouter();
     const {setPaymentSuccess}=props;
+    const activeProduct=useSelector((state)=>state.products?.activeProduct);
 
     return(
         <div className="flex flex-row w-full h-[90vh]">
@@ -28,7 +30,7 @@ const PaymentInitiaion=(props)=>{
             </div>
             <div className="flex flex-row justify-between w-[80%] mt-7">
                 <div className="flex flex-row items-center cursor-pointer" onClick={()=>{router.back()}}><FaChevronLeft /> <p>Go back to Checkout</p>  </div>
-                <button className="text-white bg-customRed w-[150px] rounded py-2" onClick={()=>{setPaymentSuccess(true)}}>Pay 40</button>
+                <button className="text-white bg-customRed w-[150px] rounded py-2" onClick={()=>{setPaymentSuccess(true)}}>Pay {activeProduct.cost}</button>
             </div>
         </div>
         <Image src="/payment-initiation.svg" className="w-[45%] mx-auto h-[85%]" alt="" height={300} width={300}/>

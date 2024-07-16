@@ -15,8 +15,8 @@ const TopSellings=()=>{
                 </div>
 
                 <div className="flex flex-row items-center h-[82%] px-9 w-full relative justify-evenly">
-                <Image src="/left.svg" alt="" className="cursor-pointer" height={70} width={70} onClick={() => { document.querySelector('.new-products').scrollBy({ left: 400, behavior: 'smooth' }); }}  />
-                <div className="flex flex-row items-center h-[82%] w-[92%] overflow-y-hidden space-x-12 px-9 overflow-x-auto new-products relative">
+                <Image src="/left.svg" alt="" className="cursor-pointer" height={70} width={70} onClick={() => { document.querySelector('.new-products3').scrollBy({ left: 400, behavior: 'smooth' }); }}  />
+                <div className="flex flex-row items-center h-[82%] w-[92%] overflow-y-hidden space-x-12 px-9 overflow-x-auto new-products3 relative">
                 {
                 newItems.map((item,idx)=>
                     <div className="flex flex-col items-center"  key={idx}>
