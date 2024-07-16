@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { FaChevronLeft } from "react-icons/fa6";
 import Footer from "../components/Footer";
+import {useRouter} from 'next/navigation';
 
 const Checkout=()=>{
+    const router=useRouter();
     return(
         <div className="">
        
@@ -23,8 +27,8 @@ const Checkout=()=>{
                 <input type="" className="border-2 rounded border-gray-300 p-2 w-[93%]" placeholder="+919989786348" />
 
                 <div className="flex flex-row items-center justify-between pr-11 w-full">
-                    <div className="flex flex-row items-center cursor-pointer"><FaChevronLeft /> <p>Go back to Cart</p>  </div>
-                    <button className="text-white bg-customRed px-6 py-2 font-semibold rounded">Save and Continue</button>
+                    <div className="flex flex-row items-center cursor-pointer" onClick={()=>{router.back()}}><FaChevronLeft /> <p>Go back to Cart</p>  </div>
+                    <button className="text-white bg-customRed px-6 py-2 font-semibold rounded" onClick={()=>{router.push('/payment')}}>Save and Continue</button>
                 </div>
 
             </div>
