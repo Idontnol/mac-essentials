@@ -7,6 +7,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import {useDispatch,useSelector} from "react-redux";
 import { testData } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const ProductInformation=()=>{
     const [favourite,setFavourite]=useState(false);
