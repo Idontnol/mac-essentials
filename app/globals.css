@@ -5,6 +5,6 @@
 :root {
 }
 
-.new-products::-webkit-scrollbar{
+.new-products::-webkit-scrollbar,.new-products2::-webkit-scrollbar,.new-products3::-webkit-scrollbar{
     display: none;
 }

@@ -15,12 +15,39 @@ export const paymentOptions=[
 ]
 
 export const newItems=[
-    {"label":"face-mask","image":"/face-mask.svg","cost":100,"originalCost":200},
-    {"label":"body-spray","image":"/body-spray.svg","cost":100,"originalCost":200},
-    {"label":"pad","image":"/pads.svg","cost":100,"originalCost":200},
-    {"label":"body-spray","image":"https://m.media-amazon.com/images/I/9101MLPcFTL._AC_UL960_FMwebp_QL65_.jpg","cost":100,"originalCost":200},
-    {"label":"body","image":"https://m.media-amazon.com/images/I/71dSn3QCY6L._AC_UL960_FMwebp_QL65_.jpg","cost":100,"originalCost":200},
+    {"label":"face-mask","image":"/face-mask.svg","cost":'10$',"originalCost":'20$'},
+    {"label":"body-spray","image":"/body-spray.svg","cost":'10$',"originalCost":'29$'},
+    {"label":"pad","image":"/pads.svg","cost":'80$',"originalCost":'300$'},
+    {"label":"body-spray","image":"https://m.media-amazon.com/images/I/9101MLPcFTL._AC_UL960_FMwebp_QL65_.jpg","cost":'130$',"originalCost":'200$'},
+    {"label":"body","image":"https://m.media-amazon.com/images/I/71dSn3QCY6L._AC_UL960_FMwebp_QL65_.jpg","cost":'100$',"originalCost":'200$'},
+    {
+      label: 'EA SPORTS College Football 25 - PlayStation 5',
+      image: 'https://m.media-amazon.com/images/I/81aE0GBL2mL._AC_UL960_FMwebp_QL65_.jpg',
+      cost: '$69.99',
+      originalCost: null,
+      isBestSeller: true,
+      delivery: 'FREE deliveryThis item will be released on July 19, 2024.',
+      productUrl: 'https://www.amazon.com/dp/B0D3PBB78P'
+    },
 ]
+
+export const bestSellers=[{
+  label: 'The Housemaid Is Watching',
+  image: 'https://m.media-amazon.com/images/I/91SMFFD6MgL._AC_UL960_FMwebp_QL65_.jpg',
+  cost: '$0.00',
+  originalCost: '$24.95',
+  isBestSeller: true,
+  delivery: 'Available instantly',
+  productUrl: 'https://www.amazon.com/dp/B0CTN29L42'
+},{
+  label: 'Summer in the City: A Novel',
+  image: 'https://m.media-amazon.com/images/I/61CXLsXznLL._AC_UL960_FMwebp_QL65_.jpg',
+  cost: '$28.00',
+  originalCost: null,
+  isBestSeller: true,
+  delivery: 'FREE delivery Mon, Mar 31, 2025 on $35 of items shipped by AmazonOr fastest delivery Tue, Mar 25, 2025 This title will be released on March 25, 2025.',
+  productUrl: 'https://www.amazon.com/dp/0063411660'
+},...newItems];
 
 export const sectionData=[{header:"COMPANY",subHeaders:[{title:'Boat Rockerz',path:'/boat-rockerz',},{title:'samsung',path:'/samasung',}]
     },{

@@ -2,24 +2,34 @@
 
 import Image from "next/image";
 import '../../globals.css';
-import { newItems } from "@/app/utils/constants";
+import { bestSellers } from "@/app/utils/constants";
+import {useRouter} from "next/navigation";
+import {useDispatch} from "react-redux";
+import { setActiveProduct } from "@/app/utils/productsSlice";
 
 const TopSellings=()=>{
+    const router=useRouter();
+    const dispatch = useDispatch();
+    const handleViewProduct=(item)=>{
+        dispatch(setActiveProduct(item));
+        router.push('/product-details');
+    }
+    
 
     return(
         <div className="flex flex-row w-full h-[100vh] pb-[5vh] pt-[5vh]">
             <div className="w-[60%] flex flex-col">
                 <div className="flex flex-row justify-between p-10">
                     <div className="flex flex-row"><h1 className="text-customRed font-bold text-2xl mr-2">MACC</h1><h1 className="font-bold text-2xl">TOP SELLINGS</h1></div>
-                    <button className="bg-[#D2D2D2] px-4 py-1">VIEW ALL</button>
+                    <button className="bg-[#D2D2D2] px-4 py-1" onClick={()=>{router.push('/products')}}>VIEW ALL</button>
                 </div>
 
                 <div className="flex flex-row items-center h-[82%] px-9 w-full relative justify-evenly">
                 <Image src="/left.svg" alt="" className="cursor-pointer" height={70} width={70} onClick={() => { document.querySelector('.new-products3').scrollBy({ left: 400, behavior: 'smooth' }); }}  />
                 <div className="flex flex-row items-center h-[82%] w-[92%] overflow-y-hidden space-x-12 px-9 overflow-x-auto new-products3 relative">
                 {
-                newItems.map((item,idx)=>
-                    <div className="flex flex-col items-center"  key={idx}>
+                bestSellers.map((item,idx)=>
+                    <div className="flex flex-col items-center cursor-pointer"  key={idx} onClick={()=>{handleViewProduct(item)}}>
                         <div className="bg-[#F3F3F3] h-[60%] w-[27vw] flex flex-row items-center justify-center p-10">
                             <Image src={`${item.image}`} alt="" className="max-h-[40vh] w-[80%] objectFit='cover'" height={20} width={20}/>
                         </div>

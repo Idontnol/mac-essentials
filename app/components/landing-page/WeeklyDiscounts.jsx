@@ -3,8 +3,10 @@
 import Image from "next/image";
 import '../../globals.css';
 import { newItems } from "@/app/utils/constants";
+import {useRouter} from "next/navigation";
 
 const WeeklyDiscounts=()=>{
+    const router=useRouter();
 
     return(
         <div className="flex flex-row w-full h-[100vh] pb-[5vh] pt-[5vh]">
@@ -12,7 +14,7 @@ const WeeklyDiscounts=()=>{
             <div className="w-[60%] flex flex-col">
                 <div className="flex flex-row justify-between p-10">
                     <div className="flex flex-row"><h1 className="text-customRed font-bold text-2xl mr-2">MACC</h1><h1 className="font-bold text-2xl">WEEKLY DISCOUNT</h1></div>
-                    <button className="bg-[#D2D2D2] px-4 py-1">VIEW ALL</button>
+                    <button className="bg-[#D2D2D2] px-4 py-1" onClick={()=>{router.push('/products')}}>VIEW ALL</button>
                 </div>
 
                 <div className="flex flex-row items-center h-[82%] px-9 w-full relative justify-evenly">
